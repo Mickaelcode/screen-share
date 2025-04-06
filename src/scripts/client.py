@@ -1,4 +1,8 @@
 import socket 
+import numpy as np 
+import cv2
+from mss import mss
+import pickle
 
 HOST, PORT =('',5000)
 
@@ -9,9 +13,12 @@ try :
     print('connecting client .........')
 
     """tranfer a data"""
-    data = 'Hello'
-    data = data.encode('utf8')
-    socket.sendall(data)
+    with mss() as sct:
+        img = np.array(sct.monitors[1])
+        data = 'Hello'
+        img = pickle.dumps(img)
+        data = data.encode('utf8')
+        socket.send(img)
 except ConnectionAbortedError:
     print('Server error')
 

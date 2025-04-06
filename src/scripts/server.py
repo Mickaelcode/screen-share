@@ -1,4 +1,6 @@
 import socket 
+import pickle
+
 
 HOST, PORT  = ('', 5000)
 
@@ -10,19 +12,19 @@ print('server running...')
 socket.listen()
 
 """While the server is on"""
-while "SERVER_IS_ON":
+while True:
     try:
-        """accept the client"""
-        conn, address = socket.accept()
-        print('waiting for client message .........')
-        """""receiving data"""""
-        data = conn.recv(1024)
-        data = data.decode('utf8')
-        print(f'client message : {data}')
-
+         conn, address = socket.accept()
+         print('waiting for client message .........')
+         data = conn.recv(1024)
+         data = pickle.loads(data)
+   # data = data.decode('utf8')
+   # print(f'client message : {data}')
+         print(data)
     except KeyboardInterrupt:
         socket.close()
-        break
     except:
         socket.close()
+
+
 socket.close()
