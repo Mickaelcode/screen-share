@@ -49,7 +49,12 @@ def receive_screen(socket):
                 
             # Deserialize
             img = pkl.loads(img_data)
-            print(f"Received image with shape: {img.shape}")
+            
+            """show the screen"""
+            cv.imshow('screen', img)
+            if cv.waitKey(20) & 0xFF == ord('q'):
+                cv.destroyAllWindows()
+                break
             
         except ConnectionError:
             print("Server disconnected")
@@ -73,8 +78,3 @@ def recv_all(sock, n):
         data.extend(packet)
     return data
 
-
-def show_screen(img):
-    cv.imshow('screen',img)
-    if cv.waitKey(20) & 0xFF == ord('q'):
-        cv.destroyAllWindows()

@@ -2,7 +2,7 @@ import socket
 import screen
 import time
 
-HOST, PORT = ('localhost', 5000)  # Change to server IP
+HOST, PORT = ('localhost', 5000)  
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
