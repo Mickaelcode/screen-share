@@ -9,7 +9,7 @@ import cv2 as cv
 def send_screen(conn):
     """Send screen from server to client with proper framing"""
     with mss() as sct:
-        monitor = {'top': 0, 'left': 0, 'width': 800, 'height': 600}
+        monitor = {'top':0,'left':0,'width':1920, 'height':1080}
         
         while True:
             try:
@@ -51,7 +51,7 @@ def receive_screen(socket):
             img = pkl.loads(img_data)
             
             """show the screen"""
-            cv.imshow('screen', img)
+            cv.imshow('screen', cv.resize(img,(1920//2,800)))
             if cv.waitKey(20) & 0xFF == ord('q'):
                 cv.destroyAllWindows()
                 break

@@ -1,8 +1,10 @@
 import socket
 import screen
 import time
+import sys 
 
-HOST, PORT = ('localhost', 5000)  
+
+HOST, PORT = (sys.argv[1], int(sys.argv[2]))  
 
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
