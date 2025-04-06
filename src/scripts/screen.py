@@ -7,7 +7,7 @@ def send_screen(conn):
     with mss() as sct :
         monitor = {'top':0, 'left':0, 'widht':800, 'height':600}
         
-        while 'running':
+        while 'sending':
             try:
                  img = np.array(sct.grab(monitor))
 
@@ -18,5 +18,17 @@ def send_screen(conn):
                 print('finishing transfer.....')
                 break
     
+
+
+def receive_screen(socket):
+    """this function is used to receive_screen from the server in the client"""
+    while 'receving':
+        try:
+            img = socket.recv(1024)
+            img = pkl.loads(img)
+            print(f'img = {img}')
+        except KeyboardInterrupt:
+            print('Finishing receve .......')
+            break
 
 
