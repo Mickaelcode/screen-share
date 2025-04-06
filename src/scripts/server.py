@@ -1,22 +1,27 @@
 import socket 
-from . import screen
+import screen
+import time
 
-HOST, PORT  = ('', 5000)
+HOST, PORT = ('', 5000)
 
-""" Create an objet socket"""
 socket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 socket.bind((HOST, PORT))
+#socket.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
 print('server running...')
-"""listen the client"""
-socket.listen()
 
 try:
-    conn, adress = socket.accept()
-    print(f'address= {adress} ------------ listen to the client...........')
-    screen.send_screen(conn)
-    conn.close()
-    print('leave the function')
-except:
+    while True:
+        socket.listen()
+        conn, address = socket.accept()
+        print(f'Connection from {address}')
+        
+        try:
+            screen.send_screen(conn)
+        finally:
+            conn.close()
+            print('Connection closed')
+            
+except KeyboardInterrupt:
+    print("Shutting down server")
+finally:
     socket.close()
-
-socket.close()
