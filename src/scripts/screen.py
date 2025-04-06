@@ -3,6 +3,8 @@ import time
 import pickle as pkl
 from mss import mss
 import struct
+import cv2 as cv 
+
 
 def send_screen(conn):
     """Send screen from server to client with proper framing"""
@@ -27,6 +29,8 @@ def send_screen(conn):
             except Exception as e:
                 print(f"Error: {e}")
                 break
+
+
 
 def receive_screen(socket):
     """Receive screen from server with proper framing"""
@@ -57,6 +61,8 @@ def receive_screen(socket):
             print(f"Error: {e}")
             break
 
+
+
 def recv_all(sock, n):
     """Helper function to receive exactly n bytes"""
     data = bytearray()
@@ -66,3 +72,9 @@ def recv_all(sock, n):
             return None
         data.extend(packet)
     return data
+
+
+def show_screen(img):
+    cv.imshow('screen',img)
+    if cv.waitKey(20) & 0xFF == ord('q'):
+        cv.destroyAllWindows()
