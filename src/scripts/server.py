@@ -1,6 +1,5 @@
 import socket 
-import pickle
-
+from . import screen
 
 HOST, PORT  = ('', 5000)
 
@@ -11,20 +10,13 @@ print('server running...')
 """listen the client"""
 socket.listen()
 
-"""While the server is on"""
-while True:
-    try:
-         conn, address = socket.accept()
-         print('waiting for client message .........')
-         data = conn.recv(1024)
-         data = pickle.loads(data)
-   # data = data.decode('utf8')
-   # print(f'client message : {data}')
-         print(data)
-    except KeyboardInterrupt:
-        socket.close()
-    except:
-        socket.close()
-
+try:
+    conn, adress = socket.accept()
+    print(f'address= {adress} ------------ listen to the client...........')
+    screen.send_screen(conn)
+    conn.close()
+    print('leave the function')
+except:
+    socket.close()
 
 socket.close()
