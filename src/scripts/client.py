@@ -8,6 +8,10 @@ try :
     socket.connect((HOST, PORT))
     print('connecting client .........')
 
+    """tranfer a data"""
+    data = 'Hello'
+    data = data.encode('utf8')
+    socket.sendall(data)
 except ConnectionAbortedError:
     print('Server error')
 

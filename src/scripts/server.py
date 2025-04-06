@@ -15,6 +15,11 @@ while "SERVER_IS_ON":
         """accept the client"""
         conn, address = socket.accept()
         print('waiting for client message .........')
+        """""receiving data"""""
+        data = conn.recv(1024)
+        data = data.decode('utf8')
+        print(f'client message : {data}')
+
     except KeyboardInterrupt:
         socket.close()
         break
