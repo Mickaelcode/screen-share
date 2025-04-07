@@ -26,3 +26,4 @@ C'est un projet que je vais développer en Python
 - *NB*: 
 	- Si vous ete le serveur le user est optionnel `python3 -H <host> -P <port>`
 
+- cliquer sur **q** pour quitter le client
