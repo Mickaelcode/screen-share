@@ -23,8 +23,10 @@ C'est un projet que j'ai  développé en Python *06/04/2025*
 - cloner le **repository** ou télécharger le **zip** du projet
 - puis `cd screen-share`
 - puis executer la commande:
-`python3 main.py -U <user> -H <host> -P <port>` -- user `s` pour serveur et `c` pour client
-- *NB*: 
-	- Si vous ete le serveur le user est optionnel `python3 -H <host> -P <port>`
+	-  Linux  `python3 main.py -U <user> -H <host> -P <port>`
+	- Window `python main.py -U <user> -H <host> -P <port>`
+- *NB* :
+	- user `s` pour serveur et `c` pour client 
+	- Si vous ete le serveur le user est optionnel `python3 -H <host> -P <port>` (Linux)
 
 - cliquer sur **q** pour quitter le client
