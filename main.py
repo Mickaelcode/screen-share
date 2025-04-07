@@ -32,7 +32,9 @@ if not args.host or not args.port :
 
 elif not args.user or args.user == 's':
     os.system(f'{executer} src/scripts/server.py {args.host} {args.port}')
-else:
+elif args.user == 'c' :
     os.system((f'{executer} src/scripts/client.py {args.host} {args.port}'))
-    
+else:
+    print('user client must be "c"') 
+    os.system(f'{executer} main.py -h') 
     
