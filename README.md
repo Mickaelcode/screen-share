@@ -17,3 +17,12 @@ C'est un projet que je vais développer en Python
   [Struct python](https://docs.python.org/3/library/struct.html)
 - Information:
 [how to screen shoot with socket in python](https://stackoverflow.com/questions/48950962/screen-sharing-in-python)
+
+### Pour l'installer:
+- cloner le **repository** ou télécharger le **zip** du projet
+- puis `cd screen-share`
+- puis executer la commande:
+`python3 main.py -U <user> -H <host> -P <port>` -- user `s` pour serveur et `c` pour client
+- *NB*: 
+	- Si vous ete le serveur le user est optionnel `python3 -H <host> -P <port>`
+
