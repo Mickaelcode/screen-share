@@ -28,5 +28,5 @@ C'est un projet que j'ai  développé en Python *06/04/2025*
 - *NB* :
 	- user `s` pour serveur et `votre_pseudo` pour client 
 	- Si vous ete le serveur l'option user est optionnel `python3 -H <host> -P <port>` (Linux)
-
+	- executer `python3 main.py -h` pour demander de l'aide sur les different option
 - cliquer sur **q** pour quitter le client
