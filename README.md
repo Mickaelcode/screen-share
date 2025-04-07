@@ -16,7 +16,7 @@ C'est un projet que je vais développer en Python
 - Le struct en python :
   [Struct python](https://docs.python.org/3/library/struct.html)
 - Information:
-	- [argparse en python] (https://www.youtube.com/watch?v=cdblJqEUDNo&t=232s)
+	- [argparse en python](https://www.youtube.com/watch?v=cdblJqEUDNo&t=232s)
 ### Pour l'installer:
 - cloner le **repository** ou télécharger le **zip** du projet
 - puis `cd screen-share`
