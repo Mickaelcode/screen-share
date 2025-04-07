@@ -1,8 +1,10 @@
 # screen-share
 This project is for sharing screen in Hotspot network  
-C'est un projet que je vais développer en Python
 
 ---
+C'est un projet que j'ai  développé en Python *06/04/2025*
+
+
 ### Ce que j'ai appris :
 - Le **socket** en Python par *EvoluNoob* :  
   [Vidéo sur les sockets par EvoluNoob](https://www.youtube.com/watch?v=vdjZvxAI5d4&list=PLrSOXFDHBtfHg8fWBd7sKPxEmahwyVBkC&index=28)
