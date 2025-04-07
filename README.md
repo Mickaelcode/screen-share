@@ -13,5 +13,7 @@ C'est un projet que je vais développer en Python
 - Le **cv2** de Python :
   - Via la documentation de MSS
   - [Documentation OpenCV (cv2)](https://docs.opencv.org/4.x/d7/d16/tutorial_py_table_of_contents_core.html)
-  - Le struct en python :
+- Le struct en python :
   [Struct python](https://docs.python.org/3/library/struct.html)
+- Information:
+[how to screen shoot with socket in python](https://stackoverflow.com/questions/48950962/screen-sharing-in-python)
