@@ -26,7 +26,7 @@ C'est un projet que j'ai  développé en Python *06/04/2025*
 	-  Linux  `python3 main.py -U <user> -H <host> -P <port>`
 	- Window `python main.py -U <user> -H <host> -P <port>`
 - *NB* :
-	- user `s` pour serveur et `c` pour client 
-	- Si vous ete le serveur le user est optionnel `python3 -H <host> -P <port>` (Linux)
+	- user `s` pour serveur et `votre_pseudo` pour client 
+	- Si vous ete le serveur l'option user est optionnel `python3 -H <host> -P <port>` (Linux)
 
 - cliquer sur **q** pour quitter le client
