@@ -5,7 +5,7 @@ import platform
 
 
 parser = argparse.ArgumentParser(description='show who is the server and client')
-parser.add_argument('-U','--user', help='c if client or s for server')
+parser.add_argument('-U','--user', help='make your own name  if client and "s" for server')
 parser.add_argument('-H', '--host', help='host machine')
 parser.add_argument('-P', '--port',type=int,  help='Port for listen')
 args = parser.parse_args()
@@ -32,9 +32,6 @@ if not args.host or not args.port :
 
 elif not args.user or args.user == 's':
     os.system(f'{executer} src/scripts/server.py {args.host} {args.port}')
-elif args.user == 'c' :
-    os.system((f'{executer} src/scripts/client.py {args.host} {args.port}'))
 else:
-    print('user client must be "c"') 
-    os.system(f'{executer} main.py -h') 
+    os.system((f'{executer} src/scripts/client.py {args.host} {args.port}'))
     
